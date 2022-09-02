@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32811.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tallerconfiable", "tallerconfiable\tallerconfiable.csproj", "{F320AA1D-E8B4-4EFF-B48C-AEE10EC4E551}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F320AA1D-E8B4-4EFF-B48C-AEE10EC4E551}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F320AA1D-E8B4-4EFF-B48C-AEE10EC4E551}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F320AA1D-E8B4-4EFF-B48C-AEE10EC4E551}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F320AA1D-E8B4-4EFF-B48C-AEE10EC4E551}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2FB2834-90AB-4B72-87F2-1F85385E98E5}
+	EndGlobalSection
+EndGlobal
