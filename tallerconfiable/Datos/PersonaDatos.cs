@@ -31,6 +31,8 @@ namespace tallerconfiable.Datos
                             Nombre = dr["Nombre"].ToString(),
                             Apellido = dr["Apellido"].ToString(),
                             anacimiento = dr["anacimiento"].ToString(),
+                            Ciudad = dr["Ciudad"].ToString(),
+                            Email = dr["Email"].ToString(),
                         });
                     }
                 }
@@ -55,11 +57,13 @@ namespace tallerconfiable.Datos
                     while (dr.Read())
                     {
 
-                        oPersona.Idpersona = Convert.ToInt32(dr["Idperona"]);
+                        oPersona.Idpersona = Convert.ToInt32(dr["Idpersona"]);
                         oPersona.Identificacion = dr["Identificacion"].ToString();
                         oPersona.Nombre = dr["Nombre"].ToString();
                         oPersona.Apellido = dr["Apellido"].ToString();
                         oPersona.anacimiento = dr["anacimiento"].ToString();
+                        oPersona.Ciudad = dr["Ciudad"].ToString();
+                        oPersona.Email = dr["Email"].ToString();
 
                     }
                 }
@@ -77,11 +81,13 @@ namespace tallerconfiable.Datos
                 using (var conexion = new SqlConnection(cn.getCadenaSQL()))
                 {
                     conexion.Open();
-                    SqlCommand cmd = new SqlCommand("sp_Guardar", conexion);
+                    SqlCommand cmd = new SqlCommand("sp_GuardarPropietario", conexion);
                     cmd.Parameters.AddWithValue("Identificacion", opersona.Identificacion);
                     cmd.Parameters.AddWithValue("Nombre", opersona.Nombre);
                     cmd.Parameters.AddWithValue("Apellido", opersona.Apellido);
                     cmd.Parameters.AddWithValue("anacimiento", opersona.anacimiento);
+                    cmd.Parameters.AddWithValue("Ciudad", opersona.Ciudad);
+                    cmd.Parameters.AddWithValue("Email", opersona.Email);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
@@ -113,6 +119,8 @@ namespace tallerconfiable.Datos
                     cmd.Parameters.AddWithValue("Nombre", opersona.Nombre);
                     cmd.Parameters.AddWithValue("Apellido", opersona.Apellido);
                     cmd.Parameters.AddWithValue("anacimiento", opersona.anacimiento);
+                    cmd.Parameters.AddWithValue("Ciudad", opersona.Ciudad);
+                    cmd.Parameters.AddWithValue("Email", opersona.Email);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }

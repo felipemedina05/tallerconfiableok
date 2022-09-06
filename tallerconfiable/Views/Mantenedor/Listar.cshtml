@@ -21,6 +21,8 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Nacimiento</th>
+                <th>Ciudad</th>
+                <th>Email</th>
                 <th></th>
             </tr>
         </thead>
@@ -32,6 +34,8 @@
                     <td>@item.Nombre</td>
                     <td>@item.Apellido</td>
                     <td>@item.anacimiento</td>
+                    <td>@item.Ciudad</td>
+                    <td>@item.Email</td>
                     <td>
                         <a asp-action="Editar" asp-controller="Mantenedor" class="btn btn-primary btn-sm" asp-route-Idpersona="@item.Idpersona">Editar</a>
                         <a asp-action="Eliminar" asp-controller="Mantenedor" class="btn btn-danger btn-sm" asp-route-Idpersona="@item.Idpersona">Eliminar</a>

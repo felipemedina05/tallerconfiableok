@@ -13,7 +13,12 @@ namespace tallerconfiable.Models
         public string? Apellido { get; set; }
         [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
         public string? anacimiento { get; set; }
-
+        [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
+        public string? Ciudad { get; set; }
+        [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
+        public string? Email { get; set; }
+        
+        
     }
 }
 
