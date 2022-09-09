@@ -1,8 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
-
+﻿
+using System.ComponentModel.DataAnnotations;
 namespace tallerconfiable.Models
 {
-    public class PersonaModelo
+    public class MecanicoModelo
     {
         [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
         public int Idpersona { get; set; }
@@ -15,11 +15,11 @@ namespace tallerconfiable.Models
         [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
         public string? anacimiento { get; set; }
         [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
-        public string? Ciudad { get; set; }
+        public string? Direccion { get; set; }
         [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
-        public string? Email { get; set; }
-        
-        
+        public string? Telefono { get; set; }
+        [Required(ErrorMessage = "EL campo es obligatorio")]//obligatoria
+        public string? Niveleducativo { get; set; }
+
     }
 }
-

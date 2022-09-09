@@ -148,8 +148,7 @@ namespace tallerconfiable.Datos
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);
                     cmd.Parameters.AddWithValue("Idpersona", Idpersona);
-
-
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
                 rpta = true;
