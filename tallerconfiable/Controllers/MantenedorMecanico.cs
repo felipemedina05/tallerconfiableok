@@ -59,7 +59,7 @@ namespace tallerconfiable.Controllers
         public IActionResult Eliminar(int Idpersona)
         {
             //devuelve la vista
-            var opersona = _MecanicoDatos.Obtener(Idpersona);
+            var opersona = _MecanicoDatos.Eliminar(Idpersona);
             return View();
         }
 
@@ -67,8 +67,7 @@ namespace tallerconfiable.Controllers
         public IActionResult Eliminar(MecanicoModelo oPersona)
         {
             //validacion de campos
-            if (!ModelState.IsValid)
-                return View();
+            
             //recibe un objeto y guarda en la base de datos
             var repuesta = _MecanicoDatos.Eliminar(oPersona.Idpersona);
             if (repuesta)

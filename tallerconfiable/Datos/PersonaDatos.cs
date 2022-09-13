@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System;
 using tallerconfiable.Datos;
 using tallerconfiable.Models;
+using System.Drawing.Printing;
 
 namespace tallerconfiable.Datos
 {
@@ -138,7 +139,8 @@ namespace tallerconfiable.Datos
             return rpta;
         }
         public bool Eliminar(int Idpersona)
-        {
+            {
+            Console.WriteLine("click eliminar");
             bool rpta;
             try
             {
@@ -147,11 +149,14 @@ namespace tallerconfiable.Datos
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_Eliminar", conexion);
+                    Console.WriteLine(Idpersona);
                     cmd.Parameters.AddWithValue("Idpersona", Idpersona);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
                 rpta = true;
+
+                
 
 
             }

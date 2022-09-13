@@ -85,8 +85,8 @@ namespace tallerconfiable.Datos
                         cmd.Parameters.AddWithValue("Nombre", opersona.Nombre);
                         cmd.Parameters.AddWithValue("Apellido", opersona.Apellido);
                         cmd.Parameters.AddWithValue("anacimiento", opersona.anacimiento);
-                        cmd.Parameters.AddWithValue("Telefono", opersona.Telefono);
                         cmd.Parameters.AddWithValue("Direccion", opersona.Direccion);
+                        cmd.Parameters.AddWithValue("Telefono", opersona.Telefono);
                         cmd.Parameters.AddWithValue("Niveleducativo", opersona.Niveleducativo);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.ExecuteNonQuery();
