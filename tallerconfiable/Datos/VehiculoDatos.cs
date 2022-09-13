@@ -53,6 +53,7 @@ namespace tallerconfiable.Datos
                         {
                             conexion.Open();
                             SqlCommand cmd = new SqlCommand("sp_GuardarVehiculo", conexion);
+                            cmd.Parameters.AddWithValue("Identificacion", oVehiculo.Identificacion);
                             cmd.Parameters.AddWithValue("Idpropietario", oVehiculo.Idpropietario);
                             cmd.Parameters.AddWithValue("Placa", oVehiculo.Placa);
                             cmd.Parameters.AddWithValue("Tipo", oVehiculo.Tipo);
@@ -122,6 +123,7 @@ namespace tallerconfiable.Datos
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_EditarVehiculo", conexion);
+                    cmd.Parameters.AddWithValue("Identificacion", ovehiculo.Identificacion);
                     cmd.Parameters.AddWithValue("Idpropietario", ovehiculo.Idpropietario);
                     cmd.Parameters.AddWithValue("Placa", ovehiculo.Placa);
                     cmd.Parameters.AddWithValue("Tipo", ovehiculo.Tipo);
