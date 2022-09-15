@@ -39,8 +39,8 @@ namespace tallerconfiable.Controllers
             public IActionResult Editar(int Idvehiculo)
             {
                 //devuelve la vista
-                var opersona = _VehiculoDatos.Obtener(Idvehiculo);
-                return View(opersona);
+                var ovehiculo = _VehiculoDatos.Obtener(Idvehiculo);
+                return View(ovehiculo);
             }
 
             [HttpPost]
@@ -50,8 +50,8 @@ namespace tallerconfiable.Controllers
                 if (!ModelState.IsValid)
                     return View();
                 //recibe un objeto y guarda en la base de datos
-                var resouesta = _VehiculoDatos.Editar(oVehiculo);
-                if (resouesta)
+                var repouesta = _VehiculoDatos.Editar(oVehiculo);
+                if (repouesta)
                     return RedirectToAction("Listar");
                 else
                     return View();

@@ -26,7 +26,7 @@ namespace tallerconfiable.Datos
                             {
                                 olista.Add(new VehiculoModelo()
                                 {
-                                    Idpropietario = Convert.ToInt32(dr["Idpropietario"]),
+                                    Idvehiculo = Convert.ToInt32(dr["Idvehiculo"]),
                                     Placa = dr["Placa"].ToString(),
                                     Tipo = dr["Tipo"].ToString(),
                                     Marca = dr["Marca"].ToString(),
@@ -94,8 +94,8 @@ namespace tallerconfiable.Datos
                     while (dr.Read())
                     {
 
-
-                        oVehiculo.Idpropietario = Convert.ToInt32(dr["Idpropietario"]);
+                        
+                        oVehiculo.Identificacion = Convert.ToInt32(dr["Identificacion"]);
                         oVehiculo.Placa = dr["Placa"].ToString();
                         oVehiculo.Tipo = dr["Tipo"].ToString();
                         oVehiculo.Marca = dr["Marca"].ToString();
@@ -161,7 +161,7 @@ namespace tallerconfiable.Datos
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_EliminarVehiculo", conexion);
                     Console.WriteLine(Idvehiculo);
-                    cmd.Parameters.AddWithValue("Idpersona", Idvehiculo);
+                    cmd.Parameters.AddWithValue("Idvehiculo", Idvehiculo);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.ExecuteNonQuery();
                 }
