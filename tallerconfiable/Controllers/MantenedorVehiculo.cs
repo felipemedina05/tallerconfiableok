@@ -50,8 +50,8 @@ namespace tallerconfiable.Controllers
                 if (!ModelState.IsValid)
                     return View();
                 //recibe un objeto y guarda en la base de datos
-                var repouesta = _VehiculoDatos.Editar(oVehiculo);
-                if (repouesta)
+                var repuesta = _VehiculoDatos.Editar(oVehiculo);
+                if (repuesta)
                     return RedirectToAction("Listar");
                 else
                     return View();

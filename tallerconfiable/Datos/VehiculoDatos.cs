@@ -123,8 +123,8 @@ namespace tallerconfiable.Datos
                 {
                     conexion.Open();
                     SqlCommand cmd = new SqlCommand("sp_EditarVehiculo", conexion);
+                    cmd.Parameters.AddWithValue("Idvehiculo", ovehiculo.Idvehiculo);
                     cmd.Parameters.AddWithValue("Identificacion", ovehiculo.Identificacion);
-                    cmd.Parameters.AddWithValue("Idpropietario", ovehiculo.Idpropietario);
                     cmd.Parameters.AddWithValue("Placa", ovehiculo.Placa);
                     cmd.Parameters.AddWithValue("Tipo", ovehiculo.Tipo);
                     cmd.Parameters.AddWithValue("Marca", ovehiculo.Marca);
