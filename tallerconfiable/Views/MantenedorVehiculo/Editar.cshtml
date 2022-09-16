@@ -14,11 +14,7 @@
 
         <form asp-action="Editar" asp-controller="MantenedorVehiculo" method="post">
             <input asp-for="Idvehiculo" type="hidden" class="form-control" />
-            <div class="mb-3">
-                <label class="form-label">Identificacion</label>
-                <input asp-for="Identificacion" type="text" class="form-control" />
-                <span asp-validation-for="Identificacion" class="text-danger"></span>
-            </div>
+             
             <div class="mb-3">
                 <label class="form-label">Placa</label>
                 <input asp-for="Placa" type="text" class="form-control" />
@@ -33,7 +29,7 @@
 
             <div class="mb-3">
                 <label class="form-label">Marca</label>
-                <input asp-for="Marca " type="text" class="form-control" />
+                <input asp-for="Marca" type="text" class="form-control" />
                 <span asp-validation-for="Marca" class="text-danger"></span>
             </div>
 

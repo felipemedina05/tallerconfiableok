@@ -17,7 +17,9 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                @*<th>Identificacion</th>*@ 
+                @*<th>Identificacion</th>*@
+
+                <th>Id Vehiculo</th>
                 <th>Placa</th>
                 <th>Tipo de Vehiculo</th>
                 <th>Marca</th>
@@ -33,7 +35,8 @@
             @foreach (var item in Model)
             {
                 <tr>
-                   @*<td>@item.Identificacion</td>*@ 
+                   @*<td>@item.Identificacion</td>*@
+                    <td>@item.Idvehiculo</td>
                     <td>@item.Placa</td>
                     <td>@item.Tipo</td>
                     <td>@item.Marca</td>
@@ -43,8 +46,8 @@
                     <td>@item.Ciudadorigen</td>
                     <td>@item.Descripcion</td>
                     <td>
-                        <a asp-action="Editar" asp-controller="MantenedorVehiculo" class="btn btn-primary btn-sm" asp-route-Idpersona="@item.Idvehiculo">Editar</a>
-                        <a asp-action="Eliminar" asp-controller="MantenedorVehiculo" class="btn btn-danger btn-sm" asp-route-Idpersona="@item.Idvehiculo">Eliminar</a>
+                        <a asp-action="Editar" asp-controller="MantenedorVehiculo" class="btn btn-primary btn-sm" asp-route-Idvehiculo="@item.Idvehiculo">Editar</a>
+                        <a asp-action="Eliminar" asp-controller="MantenedorVehiculo" class="btn btn-danger btn-sm" asp-route-Idvehiculo="@item.Idvehiculo">Eliminar</a>
                     </td>
                 </tr>
             }
