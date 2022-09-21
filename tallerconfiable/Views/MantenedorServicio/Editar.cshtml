@@ -1,0 +1,60 @@
+﻿@model ServicioModelo
+
+@{
+    ViewData["Title"] = "Editar Servicio";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+    <div class="card-header">
+        Editar Servicio
+    </div>
+    <div class="card-body">
+
+        <form asp-action="Editar" asp-controller="MantenedorServicio" method="post">
+            <input asp-for="Idservicio" type="hidden" class="form-control" />
+            <div class="mb-3">
+                <label class="form-label">Placa</label>
+                <input asp-for="Placa" type="text" class="form-control" />
+                <span asp-validation-for="Placa" class="text-danger"></span>
+            </div>
+           @* <div class="mb-3">
+                <label class="form-label">Idservicio</label>
+                <input asp-for="Idservicio" type="text" class="form-control" />
+                <span asp-validation-for="Idservicio" class="text-danger"></span>
+            </div> *@
+            <div class="mb-3">
+                <label class="form-label">Idmecanico</label>
+                <input asp-for="Idmecanico" type="text" class="form-control" />
+                <span asp-validation-for="Idmecanico" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Nivelaceite</label>
+                <input asp-for="Nivelaceite" type="text" class="form-control" />
+                <span asp-validation-for="Nivelaceite" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Nivelfrenos</label>
+                <input asp-for="Nivelfrenos" type="text" class="form-control" />
+                <span asp-validation-for="Nivelfrenos" class="text-danger"></span>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Niveldireccion</label>
+                <input asp-for="Niveldireccion" type="text" class="form-control" />
+                <span asp-validation-for="Niveldireccion" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Repuestos</label>
+                <input asp-for="Repuestos" type="text" class="form-control" />
+                <span asp-validation-for="Repuestos" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Listar" asp-controller="MantenedorServicio" class="btn btn-warning">Volver a la lista</a>
+        </form>
+    </div>
+</div>
+
